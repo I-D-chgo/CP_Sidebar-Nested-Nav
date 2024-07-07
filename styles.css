@@ -1,0 +1,357 @@
+
+/* Reset padding and margin */
+* {
+    margin: 0;
+    padding: 0;
+   }
+  
+  .body {
+      font-family: Roboto, Arial, Helvetica, sans-serif;
+  }
+  
+  .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 400;
+    line-height: 1.25;
+  }
+
+  /* Basic font styles for Roboto family from Google Fonts */
+  .roboto-thin {
+      font-family: "Roboto", sans-serif;
+      font-weight: 100;
+      font-style: normal;
+    }
+    
+    .roboto-light {
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
+      font-style: normal;
+    }
+    
+    .roboto-regular {
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+    
+    .roboto-medium {
+      font-family: "Roboto", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+    }
+    
+    .roboto-bold {
+      font-family: "Roboto", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+    }
+    
+    .roboto-black {
+      font-family: "Roboto", sans-serif;
+      font-weight: 900;
+      font-style: normal;
+    }
+    
+    .roboto-thin-italic {
+      font-family: "Roboto", sans-serif;
+      font-weight: 100;
+      font-style: italic;
+    }
+    
+    .roboto-light-italic {
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
+      font-style: italic;
+    }
+    
+    .roboto-regular-italic {
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      font-style: italic;
+    }
+    
+    .roboto-medium-italic {
+      font-family: "Roboto", sans-serif;
+      font-weight: 500;
+      font-style: italic;
+    }
+    
+    .roboto-bold-italic {
+      font-family: "Roboto", sans-serif;
+      font-weight: 700;
+      font-style: italic;
+    }
+    
+    .roboto-black-italic {
+      font-family: "Roboto", sans-serif;
+      font-weight: 900;
+      font-style: italic;
+    }  
+  
+
+  /* Basic styling for the 'X' close-button */
+  .close-button {
+    display: flex;
+    max-width: 342px;
+    min-width: 272px;
+    align-content: flex-end;
+    justify-content: right;
+    font-size: 1rem;
+    padding: 8px 0 0 0;
+    margin: 0 0 0 auto;
+    border: none;
+    color: #bababa;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  .close-button:hover {
+      color: #000;
+      transition: transform .5s ease-in-out;
+  }
+
+  /* Basic styling for the Filter header */
+  .filterHeading {
+    display: flex;
+    max-width: 342px;
+    min-width: 272px;
+    justify-content: left;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 1.125rem;
+    font-weight: 600;
+    font-stretch: ultra-condensed;
+    letter-spacing: 0.25px;
+    line-height: 1.125rem;
+    border-bottom: thin solid #dfdfdf;
+    padding: 4px 0 16px 0;
+    margin: 0 auto;
+    color: #1380b1;
+    background-color: #fff;
+}  
+
+  .accordion-button {
+    display: flex;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 0.8125rem;
+    font-weight: 400;
+    letter-spacing: 0.25px;
+    padding: 8px 0;
+    margin: 0;
+    border: none;
+    outline: 0;
+    color: #000;
+    background-color: #fff;
+    background-size: 1rem;
+    box-shadow: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform .3s ease-in-out;
+  }
+  
+  .accordion-button:hover {
+    color: #000;
+    font-weight: 600;
+    background-color: #f6f6f6;
+  }
+
+  .accordion-button:focus {
+    z-index: 3;
+    font-weight: 600;
+    color: #000;
+    background-color: #fff;
+    box-shadow: none;
+  }
+
+  .accordion-button:active {
+    color: #000;
+    background-color: #fff;
+  }
+
+  .accordion-button:not(.collapsed)::after {
+    font-weight: 600;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-dash' viewBox='0 0 16 16'%3E%3Cpath d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8'/%3E%3C/svg%3E");
+    color: #1380b1;  
+  } 
+
+  .accordion-button:not(.collapsed) {
+    font-weight: 600;
+    color: #1380b1;
+    background-color: #fff;
+    box-shadow: none;
+  }
+
+  .accordion-button::after {
+    width: 1.375rem;
+    height: 1.375rem;
+    background-size: 1.375rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-plus' viewBox='0 0 16 16'%3E%3Cpath d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4'/%3E%3C/svg%3E");
+    color: #000;
+    transition: all .5s ease-in-out;
+  }
+
+  /* Basic styling for the accordion container */
+  .container {
+    max-width: 342px;
+    padding: 0 16px 32px 16px;
+    border: 1px solid #bababa;
+  }
+  
+  /* Basic styling for the accordion */
+  .accordion {
+    font-size: 0.875rem;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    max-width: 342px;
+    min-width: 224px;
+    align-items: flex-end;
+    padding: 0 0;
+    margin: 0 auto;
+  }
+
+  .accordion-collapse {
+    padding: 0 0;
+    margin: 0 0;
+  }
+
+  .accordion-item:first-of-type .accordion-button {
+    border-top: thin solid #dfdfdf;
+    border-radius: 0 0;
+    background-color: #fff;
+  }
+  
+  .accordion-item {
+    border-left: thin;
+    border-right: thin;
+    background-color: #fff;
+  }
+
+  .accordion-item:hover {
+    background-color: #f6f6f6;
+  }
+
+  .accordion-item:focus {
+    background-color: #fff;
+  }
+
+  .accordion-item:active {
+    background-color: #fff;
+  }
+
+  .accordion-body {
+    font-size: .75rem;
+    line-height: 0.25rem;
+    padding: 0 16px 16px 16px;
+    background-color: #fff;
+  }
+
+  /* .content {
+    line-height: 1rem;
+    padding: 0 0 12px 12px;
+    border-bottom: thin solid #dfdfdf;
+  } */
+  
+  .accordion-header {
+    position: relative;
+    line-height: 1.5rem;
+    letter-spacing: 0.5px;
+    padding: 0 8px;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  .accordion-header:hover {
+    font-weight: 600;
+    color: #000;
+    background-color: #f6f6f6;
+        .accordion-button {
+            color: #000;
+            background-color: #f6f6f6;
+        }
+  }
+
+  .accordion-header:focus {
+    color: #000;
+    background-color: #fff;
+  }
+
+  .accordion-header:active {
+    color: #000;
+    background-color: #fff;
+  }
+
+  .accordion-item p {
+    margin-left: 16px;
+  }
+
+  .headerSubcategory {
+    position: relative;    
+    font-weight: 400;
+    letter-spacing: 0.25px;
+    color: #000;
+    background-color: #fff;
+    padding: 0 0 0 16px;
+    margin: 0 0;
+    cursor: pointer;
+    overflow: hidden;
+        .accordion-button {
+            padding-left: 8px;
+            padding-right: 12px;
+        }
+  }
+  
+  .headerSubcategory:hover {
+    color: #000;
+    background-color: #fff;
+        .accordion-button {
+            color: #000;
+        }
+  }
+
+  .headerSubcategory:focus {
+    background-color: #fff;
+  }
+
+  .headerSubcategory:active {
+    background-color: #fff;
+  }
+
+  .headerSubcategory .accordion-button:not(.collapsed)::after {
+    font-weight: 600;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708'/%3E%3C/svg%3E");
+    color: #1380b1; 
+  } 
+
+  .headerSubcategory .accordion-button:not(.collapsed) {
+    font-weight: 600;
+    color: #000;
+    background-color: #fff;
+    box-shadow: none;
+  }
+
+  .headerSubcategory .accordion-button::after {
+    width: 0.875rem;
+    height: 0.875rem;
+    background-size: 0.875rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chevron-right' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708'/%3E%3C/svg%3E");
+    color: #000;
+    transition: all .5s ease-in-out;
+  }
+
+  .subcategory {
+    position: relative;    
+    font-size: .75rem;
+    font-weight: 400;
+    padding: 0 8px 8px 20px;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  .subcategory:hover {
+      background-color: #f6f6f6;
+  }
+  
+  /* Basic styling for Bootstrap Icons */
+  .accordion-body .bi {
+    font-size: 0.75rem;
+    -webkit-text-stroke: 0.5px;
+  }
